@@ -6,7 +6,7 @@ import { BooksContext, iRegisterBooksProps } from "../../contexts/BookContext";
 import { useContext } from "react";
 
 const ModalAddBook = () => {
-  const { CloseModal, RegisterBook } = useContext(BooksContext);
+  const { ToggleModalRegister, RegisterBook } = useContext(BooksContext);
 
   const formSchema = yup.object().shape({
     title: yup.string().required("Nome do livro obrigatório"),
@@ -26,7 +26,7 @@ const ModalAddBook = () => {
       <DivContainer>
         <HeaderModal>
           <h6>Cadastrar Livro</h6>
-          <button onClick={CloseModal}>X</button>
+          <button onClick={ToggleModalRegister}>X</button>
         </HeaderModal>
         <FormModal onSubmit={handleSubmit(RegisterBook)}>
           <label htmlFor="title">Titulo</label>

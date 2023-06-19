@@ -6,7 +6,7 @@ import CardBook from "../../components/CardBooks";
 import ModalAddBook from "../../components/Modal";
 
 const HomePage = () => {
-  const { books, showModal, ModalShow } = useContext(BooksContext);
+  const { books, showModal, ToggleModalRegister } = useContext(BooksContext);
 
   return (
     <>
@@ -18,7 +18,7 @@ const HomePage = () => {
       </DivWelcome>
       <DivAdd>
         <h2>Livros</h2>
-        <button onClick={ModalShow}>
+        <button onClick={ToggleModalRegister}>
           <img src={add} alt="adcionar" />
         </button>
       </DivAdd>

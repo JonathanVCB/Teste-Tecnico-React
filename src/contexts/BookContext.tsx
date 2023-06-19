@@ -15,8 +15,7 @@ export interface iRegisterBooksProps {
 interface iBooksValues {
   RegisterBook: (data: iRegisterBooksProps) => void;
   DeleteBook: (title: string) => void;
-  ModalShow: () => void;
-  CloseModal: () => void;
+  ToggleModalRegister: () => void;
   showModal: boolean;
   books: IBooks[];
 }
@@ -42,12 +41,8 @@ function BooksProvider({ children }: iBooksProviderProps) {
     toast.success("Livro deletado com sucesso");
   }
 
-  function ModalShow(): void {
-    setShowModal(true);
-  }
-
-  function CloseModal(): void {
-    setShowModal(false);
+  function ToggleModalRegister(): void {
+    setShowModal(!showModal);
   }
 
   return (
@@ -55,8 +50,7 @@ function BooksProvider({ children }: iBooksProviderProps) {
       value={{
         RegisterBook,
         DeleteBook,
-        ModalShow,
-        CloseModal,
+        ToggleModalRegister,
         showModal,
         books,
       }}
