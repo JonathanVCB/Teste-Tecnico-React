@@ -14,7 +14,7 @@ const HomePage = () => {
         <h1>Gerenciador de livros</h1>
       </Header>
       <DivWelcome>
-        <h1>Olá, sejam bem vindos !</h1>
+        <h1>Olá, sejam bem vindos!</h1>
       </DivWelcome>
       <DivAdd>
         <h2>Livros</h2>

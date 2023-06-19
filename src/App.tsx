@@ -1,9 +1,7 @@
 import "./App.css";
 import MainRoutes from "./routes";
 import { ToastContainer } from "react-toastify";
-
 import "react-toastify/dist/ReactToastify.css";
-
 import BooksProvider from "./contexts/BookContext";
 
 function App() {
