@@ -17,20 +17,25 @@ export const Card = styled.li`
 `;
 
 export const DivDelete = styled.div`
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   > span {
     font-size: 0.761rem;
     font-weight: 400;
     color: var(--Grey-1);
   }
   > img {
+    object-fit: contain;
     cursor: pointer;
     transition: 0.7s;
   }
   > img:hover {
     transform: scale(1.5);
+  }
+  > img {
+    width: 15px;
   }
 
   @media (min-width: 500px) {

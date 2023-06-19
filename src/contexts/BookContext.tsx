@@ -19,9 +19,6 @@ interface iBooksValues {
   CloseModal: () => void;
   showModal: boolean;
   books: IBooks[];
-  showModalDescription: boolean;
-  ModalShowDescription: () => void;
-  CloseModalDescription: () => void;
 }
 
 export interface IBooks {
@@ -33,8 +30,6 @@ export interface IBooks {
 function BooksProvider({ children }: iBooksProviderProps) {
   const [books, setBooks] = useState<IBooks[]>([]);
   const [showModal, setShowModal] = useState<boolean>(false);
-  const [showModalDescription, setShowModalDescription] =
-    useState<boolean>(false);
 
   async function RegisterBook(data: iRegisterBooksProps): Promise<void> {
     setBooks([...books, data]);
@@ -55,14 +50,6 @@ function BooksProvider({ children }: iBooksProviderProps) {
     setShowModal(false);
   }
 
-  function ModalShowDescription(): void {
-    setShowModalDescription(true);
-  }
-
-  function CloseModalDescription(): void {
-    setShowModalDescription(false);
-  }
-
   return (
     <BooksContext.Provider
       value={{
@@ -72,9 +59,6 @@ function BooksProvider({ children }: iBooksProviderProps) {
         CloseModal,
         showModal,
         books,
-        showModalDescription,
-        ModalShowDescription,
-        CloseModalDescription,
       }}
     >
       {children}

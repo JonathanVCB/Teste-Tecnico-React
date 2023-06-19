@@ -99,4 +99,8 @@ export const FormModal = styled.form`
   > button:hover {
     background-color: var(--Color-primary-Focus);
   }
+  > span {
+    font-size: 0.6rem;
+    color: var(--Negative);
+  }
 `;

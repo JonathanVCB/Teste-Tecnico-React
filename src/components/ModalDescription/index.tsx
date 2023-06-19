@@ -4,26 +4,24 @@ import {
   HeaderModal,
   SectionModal,
 } from "./style";
-import { BooksContext } from "../../contexts/BookContext";
-import { useContext } from "react";
 
 interface IModalDescriptionBookProps {
   title: string;
   description: string;
+  toggleModalDescription: () => void;
 }
 
 const ModalDescriptionBook = ({
   title,
   description,
+  toggleModalDescription,
 }: IModalDescriptionBookProps) => {
-  const { CloseModalDescription } = useContext(BooksContext);
-
   return (
     <SectionModal>
       <DivContainer>
         <HeaderModal>
           <h6>{title}</h6>
-          <button onClick={CloseModalDescription}>X</button>
+          <button onClick={toggleModalDescription}>X</button>
         </HeaderModal>
         <DivDescription>
           <p>{description}</p>
