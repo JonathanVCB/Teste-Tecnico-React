@@ -61,8 +61,8 @@ export const DivDescription = styled.div`
   gap: 1rem;
 
   > p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    color: var(--Grey-0);
+    color: var(--Grey-1);
   }
 `;

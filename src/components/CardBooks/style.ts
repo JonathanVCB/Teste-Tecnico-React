@@ -8,6 +8,7 @@ export const Card = styled.li`
   align-items: center;
   background-color: var(--Grey-4);
   padding: 1rem;
+  cursor: pointer;
   > h5 {
     font-size: 0.938rem;
     font-weight: 700;
